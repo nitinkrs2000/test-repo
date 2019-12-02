@@ -1,0 +1,3721 @@
+
+[root@tefrs ~]# ccps-oracle-install.sh --drop-and-create-users --db-oracle-directory .
+Enter DBMS account 'CCPS' password:
+Re-enter password:
+Enter DBMS account 'CRYSTAL' password:
+Re-enter password:
+Enter DBMS account 'CCXML' password:
+Re-enter password:
+Enter DBMS account 'MSCML' password:
+Re-enter password:
+Enter DBMS account 'JBOSS_JMS' password:
+Re-enter password:
+Enter DBMS account 'CCPS_DS' password:
+Re-enter password:
+Enter DBMS account 'REPORT_USER' password:
+Re-enter password:
+********************************
+* LMF installation started at: Tue Oct 29 22:14:16 UTC 2019
+********************************
+********************************
+* Creating users
+********************************
+Enter DBMS sysdba user name: sys
+Enter DBMS account 'sys' password:
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Profile created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CCPS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CCPS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CCPS_INDEX.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CCPS_INDEX.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER CCPS IDENTIFIED BY &NIVRDB_CCPS_PASSWD DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+new   1: CREATE USER CCPS IDENTIFIED BY CCPS DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   1: CREATE USER CCPS_DS IDENTIFIED BY &NIVRDB_CCPS_DS_PASSWD DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+new   1: CREATE USER CCPS_DS IDENTIFIED BY CCPS_DS DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Trigger created.
+
+old   1: CREATE USER REPORT_USER IDENTIFIED BY &NIVRDB_REPORT_USER_PASSWD DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+new   1: CREATE USER REPORT_USER IDENTIFIED BY REPORT_USER DEFAULT TABLESPACE CCPS PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/JBOSS_JMS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './JBOSS_JMS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER JBOSS_JMS IDENTIFIED BY &NIVRDB_JBOSS_JMS_PASSWD DEFAULT TABLESPACE JBOSS_JMS PROFILE RS_PROFILE
+new   1: CREATE USER JBOSS_JMS IDENTIFIED BY JBOSS_JMS DEFAULT TABLESPACE JBOSS_JMS PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CCXML.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CCXML.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CCXML_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CCXML_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER CCXML IDENTIFIED BY &NIVRDB_CCXML_PASSWD DEFAULT TABLESPACE CCXML PROFILE RS_PROFILE
+new   1: CREATE USER CCXML IDENTIFIED BY CCXML DEFAULT TABLESPACE CCXML PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CRYSTAL.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CRYSTAL.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CRYSTAL_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CRYSTAL_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CRYSTAL_CAT1.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CRYSTAL_CAT1.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/CRYSTAL_INDEX_CAT1.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './CRYSTAL_INDEX_CAT1.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER CRYSTAL IDENTIFIED BY &NIVRDB_VXML_PASSWD DEFAULT TABLESPACE CRYSTAL PROFILE RS_PROFILE
+new   1: CREATE USER CRYSTAL IDENTIFIED BY CRYSTAL DEFAULT TABLESPACE CRYSTAL PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/MSCML.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './MSCML.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/MSCML_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './MSCML_INDEX.dbf' SIZE 10M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER MSCML IDENTIFIED BY &NIVRDB_MSCML_PASSWD DEFAULT TABLESPACE MSCML PROFILE RS_PROFILE
+new   1: CREATE USER MSCML IDENTIFIED BY MSCML DEFAULT TABLESPACE MSCML PROFILE RS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+ccps-oracle-install.sh                                     [  OK  ]
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# ccps-oracle-install.sh --create-tables
+Enter DBMS account 'CCPS' password:
+Re-enter password:
+Enter DBMS account 'CRYSTAL' password:
+Re-enter password:
+Enter DBMS account 'CCXML' password:
+Re-enter password:
+Enter DBMS account 'MSCML' password:
+Re-enter password:
+********************************
+* LMF installation started at: Tue Oct 29 22:15:11 UTC 2019
+********************************
+********************************
+* Creating CCPS data
+********************************
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+
+Type created.
+
+
+Type body created.
+
+
+Function created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on ALERTCLEANANCES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on ALERTCLEANANCES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on ALERTCONTEXTS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on ALERTCONTEXTS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on CONTENTTYPES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on CONTENTTYPES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on COUNTERTYPES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on COUNTERTYPES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on FTPFOLDERCFGS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on FTPFOLDERCFGS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on GROUPS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on GROUPS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on INTERCEPTIONREQUESTS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on INTERCEPTIONREQUESTS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on INTERCEPTIONRESULTS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on INTERCEPTIONRESULTS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICTYPES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICTYPES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on REPORT_PERIOD to CCPS_DS
+granting REPORT_USER_PRIVILEGES on REPORT_PERIOD to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on REPORTS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on REPORTS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on ROLES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on ROLES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on SUBSYSTEMS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on SUBSYSTEMS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on TRACELEVELS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRACELEVELS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on USERS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on USERS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on VERSIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on VERSIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on CDRDETAILEXPORTTASKS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on CDRDETAILEXPORTTASKS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on CDRFILTERCFGS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on CDRFILTERCFGS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on GROUPCONTENTTYPERELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on GROUPCONTENTTYPERELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on GROUPRELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on GROUPRELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICSUMMARY to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICSUMMARY to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICTHRESHOLDS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICTHRESHOLDS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICVALUES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICVALUES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on PROPERTIES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on PROPERTIES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on REPORTMETRICRELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on REPORTMETRICRELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on USERROLERELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on USERROLERELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on ALERTNOTIFICATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on ALERTNOTIFICATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on COUNTERS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on COUNTERS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on COUNTERVALUES to CCPS_DS
+granting REPORT_USER_PRIVILEGES on COUNTERVALUES to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on METRICGROUPRELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on METRICGROUPRELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on COUNTERGROUPRELATIONS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on COUNTERGROUPRELATIONS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on TENANTS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TENANTS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on FILTERS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on FILTERS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on COUNTER_DEF to CCPS_DS
+granting REPORT_USER_PRIVILEGES on COUNTER_DEF to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+granting CCPS_DS_PRIVILEGES on CDR_STORAGE_CFGS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on CDR_STORAGE_CFGS to REPORT_USER
+
+Call completed.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Sequence created.
+
+
+Grant succeeded.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+granting CCPS_DS_PRIVILEGES on VISIBLE_REPORT_PERIOD to CCPS_DS
+granting REPORT_USER_PRIVILEGES on VISIBLE_REPORT_PERIOD to REPORT_USER
+
+Call completed.
+
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+********************************
+* Creating VXML CCPS data
+********************************
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+********************************
+* Creating VXML data
+********************************
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_ERRORS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_LOG to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLING to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLING to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_DURATION to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_DURATION to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLED to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLED to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLED_CALLING to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLED_CALLING to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLED_DURATION to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLED_DURATION to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_CALLED to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_CALLED to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_COUNTER_HOUR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_COUNTER_HOUR to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on MISSED_CDR_COUNT to CCPS_DS
+granting REPORT_USER_PRIVILEGES on MISSED_CDR_COUNT to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+retention for VXML.DAYS_IN_FUTURE is 2
+returning retention: 2
+retention for VXML.DAYS_IN_PAST is 10
+returning retention: 10
+retention for VXML.DEFAULT_CATEGORY is 90,yes
+returning retention: 90
+creating table DAILY_20191020_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_CDR to REPORT_USER
+adding primary key on table DAILY_20191020_CDR
+creating index IDX_20191020_CDR_1
+creating index IDX_20191020_CDR_2
+CREATE INDEX IDX_20191020_CDR_3 ON DAILY_20191020_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191020_CDR ADD CONSTRAINTS FK_20191020_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191020_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191020_ERRORS
+creating index IDX_20191020_ERRORS_1
+creating table DAILY_20191020_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_LOG to REPORT_USER
+adding primary key on table DAILY_20191020_LOG
+creating index IDX_20191020_LOG_1
+creating view DAILY_20191020_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_LOG_COMP to REPORT_USER
+creating table DAILY_20191021_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_CDR to REPORT_USER
+adding primary key on table DAILY_20191021_CDR
+creating index IDX_20191021_CDR_1
+creating index IDX_20191021_CDR_2
+CREATE INDEX IDX_20191021_CDR_3 ON DAILY_20191021_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191021_CDR ADD CONSTRAINTS FK_20191021_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191021_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191021_ERRORS
+creating index IDX_20191021_ERRORS_1
+creating table DAILY_20191021_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_LOG to REPORT_USER
+adding primary key on table DAILY_20191021_LOG
+creating index IDX_20191021_LOG_1
+creating view DAILY_20191021_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_LOG_COMP to REPORT_USER
+creating table DAILY_20191022_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_CDR to REPORT_USER
+adding primary key on table DAILY_20191022_CDR
+creating index IDX_20191022_CDR_1
+creating index IDX_20191022_CDR_2
+CREATE INDEX IDX_20191022_CDR_3 ON DAILY_20191022_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191022_CDR ADD CONSTRAINTS FK_20191022_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191022_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191022_ERRORS
+creating index IDX_20191022_ERRORS_1
+creating table DAILY_20191022_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_LOG to REPORT_USER
+adding primary key on table DAILY_20191022_LOG
+creating index IDX_20191022_LOG_1
+creating view DAILY_20191022_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_LOG_COMP to REPORT_USER
+creating table DAILY_20191023_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_CDR to REPORT_USER
+adding primary key on table DAILY_20191023_CDR
+creating index IDX_20191023_CDR_1
+creating index IDX_20191023_CDR_2
+CREATE INDEX IDX_20191023_CDR_3 ON DAILY_20191023_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191023_CDR ADD CONSTRAINTS FK_20191023_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191023_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191023_ERRORS
+creating index IDX_20191023_ERRORS_1
+creating table DAILY_20191023_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_LOG to REPORT_USER
+adding primary key on table DAILY_20191023_LOG
+creating index IDX_20191023_LOG_1
+creating view DAILY_20191023_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_LOG_COMP to REPORT_USER
+creating table DAILY_20191024_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_CDR to REPORT_USER
+adding primary key on table DAILY_20191024_CDR
+creating index IDX_20191024_CDR_1
+creating index IDX_20191024_CDR_2
+CREATE INDEX IDX_20191024_CDR_3 ON DAILY_20191024_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191024_CDR ADD CONSTRAINTS FK_20191024_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191024_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191024_ERRORS
+creating index IDX_20191024_ERRORS_1
+creating table DAILY_20191024_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_LOG to REPORT_USER
+adding primary key on table DAILY_20191024_LOG
+creating index IDX_20191024_LOG_1
+creating view DAILY_20191024_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_LOG_COMP to REPORT_USER
+creating table DAILY_20191025_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_CDR to REPORT_USER
+adding primary key on table DAILY_20191025_CDR
+creating index IDX_20191025_CDR_1
+creating index IDX_20191025_CDR_2
+CREATE INDEX IDX_20191025_CDR_3 ON DAILY_20191025_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191025_CDR ADD CONSTRAINTS FK_20191025_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191025_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191025_ERRORS
+creating index IDX_20191025_ERRORS_1
+creating table DAILY_20191025_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_LOG to REPORT_USER
+adding primary key on table DAILY_20191025_LOG
+creating index IDX_20191025_LOG_1
+creating view DAILY_20191025_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_LOG_COMP to REPORT_USER
+creating table DAILY_20191026_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_CDR to REPORT_USER
+adding primary key on table DAILY_20191026_CDR
+creating index IDX_20191026_CDR_1
+creating index IDX_20191026_CDR_2
+CREATE INDEX IDX_20191026_CDR_3 ON DAILY_20191026_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191026_CDR ADD CONSTRAINTS FK_20191026_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191026_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191026_ERRORS
+creating index IDX_20191026_ERRORS_1
+creating table DAILY_20191026_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_LOG to REPORT_USER
+adding primary key on table DAILY_20191026_LOG
+creating index IDX_20191026_LOG_1
+creating view DAILY_20191026_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_LOG_COMP to REPORT_USER
+creating table DAILY_20191027_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_CDR to REPORT_USER
+adding primary key on table DAILY_20191027_CDR
+creating index IDX_20191027_CDR_1
+creating index IDX_20191027_CDR_2
+CREATE INDEX IDX_20191027_CDR_3 ON DAILY_20191027_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191027_CDR ADD CONSTRAINTS FK_20191027_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191027_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191027_ERRORS
+creating index IDX_20191027_ERRORS_1
+creating table DAILY_20191027_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_LOG to REPORT_USER
+adding primary key on table DAILY_20191027_LOG
+creating index IDX_20191027_LOG_1
+creating view DAILY_20191027_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_LOG_COMP to REPORT_USER
+creating table DAILY_20191028_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_CDR to REPORT_USER
+adding primary key on table DAILY_20191028_CDR
+creating index IDX_20191028_CDR_1
+creating index IDX_20191028_CDR_2
+CREATE INDEX IDX_20191028_CDR_3 ON DAILY_20191028_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191028_CDR ADD CONSTRAINTS FK_20191028_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191028_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191028_ERRORS
+creating index IDX_20191028_ERRORS_1
+creating table DAILY_20191028_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG to REPORT_USER
+adding primary key on table DAILY_20191028_LOG
+creating index IDX_20191028_LOG_1
+creating view DAILY_20191028_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG_COMP to REPORT_USER
+creating table DAILY_20191029_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_CDR to REPORT_USER
+adding primary key on table DAILY_20191029_CDR
+creating index IDX_20191029_CDR_1
+creating index IDX_20191029_CDR_2
+CREATE INDEX IDX_20191029_CDR_3 ON DAILY_20191029_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191029_CDR ADD CONSTRAINTS FK_20191029_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191029_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191029_ERRORS
+creating index IDX_20191029_ERRORS_1
+creating table DAILY_20191029_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG to REPORT_USER
+adding primary key on table DAILY_20191029_LOG
+creating index IDX_20191029_LOG_1
+creating view DAILY_20191029_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG_COMP to REPORT_USER
+creating table DAILY_20191030_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_CDR to REPORT_USER
+adding primary key on table DAILY_20191030_CDR
+creating index IDX_20191030_CDR_1
+creating index IDX_20191030_CDR_2
+CREATE INDEX IDX_20191030_CDR_3 ON DAILY_20191030_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191030_CDR ADD CONSTRAINTS FK_20191030_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191030_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191030_ERRORS
+creating index IDX_20191030_ERRORS_1
+creating table DAILY_20191030_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG to REPORT_USER
+adding primary key on table DAILY_20191030_LOG
+creating index IDX_20191030_LOG_1
+creating view DAILY_20191030_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG_COMP to REPORT_USER
+creating table DAILY_20191031_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_CDR to REPORT_USER
+adding primary key on table DAILY_20191031_CDR
+creating index IDX_20191031_CDR_1
+creating index IDX_20191031_CDR_2
+CREATE INDEX IDX_20191031_CDR_3 ON DAILY_20191031_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191031_CDR ADD CONSTRAINTS FK_20191031_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191031_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191031_ERRORS
+creating index IDX_20191031_ERRORS_1
+creating table DAILY_20191031_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG to REPORT_USER
+adding primary key on table DAILY_20191031_LOG
+creating index IDX_20191031_LOG_1
+creating view DAILY_20191031_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG_COMP to REPORT_USER
+creating table DAILY_20191101_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_CDR to REPORT_USER
+adding primary key on table DAILY_20191101_CDR
+creating index IDX_20191101_CDR_1
+creating index IDX_20191101_CDR_2
+CREATE INDEX IDX_20191101_CDR_3 ON DAILY_20191101_CDR(CONTENTTYPEID) LOCAL STORE
+IN (CRYSTAL_INDEX)
+ALTER TABLE DAILY_20191101_CDR ADD CONSTRAINTS FK_20191101_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191101_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191101_ERRORS
+creating index IDX_20191101_ERRORS_1
+creating table DAILY_20191101_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG to REPORT_USER
+adding primary key on table DAILY_20191101_LOG
+creating index IDX_20191101_LOG_1
+creating view DAILY_20191101_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG_COMP to REPORT_USER
+retention for VXML.CATEGORY1 is 2,no
+returning retention: 2
+creating table DAILY_20191028_CDR_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_CDR_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_CDR_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191028_CDR_CAT1
+creating index IDX_20191028_CDR_CAT1_1
+creating index IDX_20191028_CDR_CAT1_2
+CREATE INDEX IDX_20191028_CDR_CAT1_3 ON DAILY_20191028_CDR_CAT1(CONTENTTYPEID)
+LOCAL STORE IN (CRYSTAL_INDEX_CAT1)
+ALTER TABLE DAILY_20191028_CDR_CAT1 ADD CONSTRAINTS FK_20191028_CDR_CAT1 FOREIGN
+KEY (CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191028_ERRORS_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_ERRORS_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_ERRORS_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191028_ERRORS_CAT1
+creating index IDX_20191028_ERRORS_CAT1_1
+creating table DAILY_20191028_LOG_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191028_LOG_CAT1
+creating index IDX_20191028_LOG_CAT1_1
+creating view DAILY_20191028_LOG_COMP_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG_COMP_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG_COMP_CAT1 to REPORT_USER
+creating table DAILY_20191029_CDR_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_CDR_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_CDR_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191029_CDR_CAT1
+creating index IDX_20191029_CDR_CAT1_1
+creating index IDX_20191029_CDR_CAT1_2
+CREATE INDEX IDX_20191029_CDR_CAT1_3 ON DAILY_20191029_CDR_CAT1(CONTENTTYPEID)
+LOCAL STORE IN (CRYSTAL_INDEX_CAT1)
+ALTER TABLE DAILY_20191029_CDR_CAT1 ADD CONSTRAINTS FK_20191029_CDR_CAT1 FOREIGN
+KEY (CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191029_ERRORS_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_ERRORS_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_ERRORS_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191029_ERRORS_CAT1
+creating index IDX_20191029_ERRORS_CAT1_1
+creating table DAILY_20191029_LOG_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191029_LOG_CAT1
+creating index IDX_20191029_LOG_CAT1_1
+creating view DAILY_20191029_LOG_COMP_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG_COMP_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG_COMP_CAT1 to REPORT_USER
+creating table DAILY_20191030_CDR_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_CDR_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_CDR_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191030_CDR_CAT1
+creating index IDX_20191030_CDR_CAT1_1
+creating index IDX_20191030_CDR_CAT1_2
+CREATE INDEX IDX_20191030_CDR_CAT1_3 ON DAILY_20191030_CDR_CAT1(CONTENTTYPEID)
+LOCAL STORE IN (CRYSTAL_INDEX_CAT1)
+ALTER TABLE DAILY_20191030_CDR_CAT1 ADD CONSTRAINTS FK_20191030_CDR_CAT1 FOREIGN
+KEY (CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191030_ERRORS_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_ERRORS_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_ERRORS_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191030_ERRORS_CAT1
+creating index IDX_20191030_ERRORS_CAT1_1
+creating table DAILY_20191030_LOG_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191030_LOG_CAT1
+creating index IDX_20191030_LOG_CAT1_1
+creating view DAILY_20191030_LOG_COMP_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG_COMP_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG_COMP_CAT1 to REPORT_USER
+creating table DAILY_20191031_CDR_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_CDR_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_CDR_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191031_CDR_CAT1
+creating index IDX_20191031_CDR_CAT1_1
+creating index IDX_20191031_CDR_CAT1_2
+CREATE INDEX IDX_20191031_CDR_CAT1_3 ON DAILY_20191031_CDR_CAT1(CONTENTTYPEID)
+LOCAL STORE IN (CRYSTAL_INDEX_CAT1)
+ALTER TABLE DAILY_20191031_CDR_CAT1 ADD CONSTRAINTS FK_20191031_CDR_CAT1 FOREIGN
+KEY (CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191031_ERRORS_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_ERRORS_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_ERRORS_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191031_ERRORS_CAT1
+creating index IDX_20191031_ERRORS_CAT1_1
+creating table DAILY_20191031_LOG_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191031_LOG_CAT1
+creating index IDX_20191031_LOG_CAT1_1
+creating view DAILY_20191031_LOG_COMP_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG_COMP_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG_COMP_CAT1 to REPORT_USER
+creating table DAILY_20191101_CDR_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_CDR_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_CDR_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191101_CDR_CAT1
+creating index IDX_20191101_CDR_CAT1_1
+creating index IDX_20191101_CDR_CAT1_2
+CREATE INDEX IDX_20191101_CDR_CAT1_3 ON DAILY_20191101_CDR_CAT1(CONTENTTYPEID)
+LOCAL STORE IN (CRYSTAL_INDEX_CAT1)
+ALTER TABLE DAILY_20191101_CDR_CAT1 ADD CONSTRAINTS FK_20191101_CDR_CAT1 FOREIGN
+KEY (CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191101_ERRORS_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_ERRORS_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_ERRORS_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191101_ERRORS_CAT1
+creating index IDX_20191101_ERRORS_CAT1_1
+creating table DAILY_20191101_LOG_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG_CAT1 to REPORT_USER
+adding primary key on table DAILY_20191101_LOG_CAT1
+creating index IDX_20191101_LOG_CAT1_1
+creating view DAILY_20191101_LOG_COMP_CAT1
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG_COMP_CAT1 to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG_COMP_CAT1 to REPORT_USER
+
+PL/SQL procedure successfully completed.
+
+CREATE OR REPLACE FORCE VIEW CDR AS SELECT * FROM
+                  (SELECT *
+FROM DAILY_20191029_CDR)
+        UNION ALL (SELECT * FROM
+DAILY_20191029_CDR_CAT1)
+CREATE OR REPLACE FORCE VIEW ERRORS AS SELECT * FROM
+                  (SELECT *
+FROM DAILY_20191029_ERRORS)
+        UNION ALL (SELECT * FROM
+DAILY_20191029_ERRORS_CAT1)
+CREATE OR REPLACE FORCE VIEW LOG AS SELECT * FROM
+                  (SELECT *
+FROM DAILY_20191029_LOG)
+        UNION ALL (SELECT * FROM
+DAILY_20191029_LOG_CAT1)
+CREATE OR REPLACE FORCE VIEW LOG_COMP AS SELECT * FROM
+                  (SELECT
+* FROM DAILY_20191029_LOG_COMP)
+        UNION ALL (SELECT * FROM
+DAILY_20191029_LOG_COMP_CAT1)
+
+PL/SQL procedure successfully completed.
+
+
+Package altered.
+
+No errors.
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on SUMMARY_CDR to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on SUMMARY_CDR_CALLED to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on SUMMARY_CDR_CALLING_DUR to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on SUMMARY_CDR_CALLING_DUR_CALLED to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_CALLING to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_CALLING to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_DURATION to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_SVC_CALLING to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_SVC_DURATION to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAF_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAF_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAF_SITE_SVC_CALLING to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAF_SITE_SVC_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TTSPORTUTIL_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_VXMLMSG_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_VXMLMSG_SITE_SVC_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_VXMLMSG_SITE_SVC_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRCONFIDENCE_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRCONFIDENCE_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRPORTUTIL_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRPORTUTIL_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRRECOGNITION_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASRRECOGNITION_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASR_TTS_INVO_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ASR_TTS_INVO_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_CALLDURADIST_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_COLLLATENCY_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_COLLLATENCY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORDIST_SITE_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORDIST_SITE_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORDIST_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORNUM_BUSY_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORNUM_BUSY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERROR_TREND_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERROR_TREND_SITE_ERRTYPE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_FAILEDCALL_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_MOU_SITE_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_MOU_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_MOU_SITE_SVC_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PERF_BUSY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PERF_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_POPU_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_HOUR_SITE_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_HOUR_SITE_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_HOUR_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_SITE_DPC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_SITE_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PORTUTIL_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PROMPTLATENCY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PULSE_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRDIS_SITE_DPC_ERRTYPE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRDIS_SITE_SVC_ERRTYPE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRDIS_SITE_SVR_ERRTYPE to REPORT_USER
+
+Call completed.
+
+Job Number is: 3
+
+PL/SQL procedure successfully completed.
+
+Job Number is: 4
+
+PL/SQL procedure successfully completed.
+
+********************************
+* Creating CCXML CCPS data
+********************************
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+********************************
+* Creating CCXML data
+********************************
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_ERRORS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_LOG to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_CALLED to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_CALLED to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLED to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLED to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_SITE_CALLED_DURATION to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_SITE_CALLED_DURATION to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_COUNTER_HOUR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_COUNTER_HOUR to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on MISSED_CDR_COUNT to CCPS_DS
+granting REPORT_USER_PRIVILEGES on MISSED_CDR_COUNT to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_SUBSCRIPTIONID to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_SUBSCRIPTIONID to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_AGENTID to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_AGENTID to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_CCXML_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_CCXML_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PARAM_CCXML_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SITE_SVC_DURATION to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_TRAFFIC_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORDIST_SITE_SERVER to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORDIST_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORNUM_BUSY_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORNUM_BUSY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRORNUM_BUSY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERR_TREND_SITE_ERRORTYPE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_FAILEDCALL_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_INTERNALLATENCY_SITE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_INTERNALLATENCY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PERF_BUSY_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_PERF_SITE_SVC to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRDIS_SITE_SVC_ERRTYPE to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+granting REPORT_USER_PRIVILEGES on VIEW_ERRDIS_SITE_SVR_ERRTYPE to REPORT_USER
+
+Call completed.
+
+retention for CCXML.DAYS_IN_FUTURE is 2
+returning retention: 2
+retention for CCXML.DAYS_IN_PAST is 10
+returning retention: 10
+creating table DAILY_20191020_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_CDR to REPORT_USER
+adding primary key on table DAILY_20191020_CDR
+creating index IDX_20191020_CDR_1
+creating index IDX_20191020_CDR_2
+ALTER TABLE DAILY_20191020_CDR ADD CONSTRAINTS FK_20191020_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191020_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191020_ERRORS
+creating index IDX_20191020_ERRORS_1
+creating table DAILY_20191020_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_LOG to REPORT_USER
+adding primary key on table DAILY_20191020_LOG
+creating index IDX_20191020_LOG_1
+creating table DAILY_20191020_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191020_LOG_COMP
+creating index IDX_20191020_LOG_COMP_1
+creating table DAILY_20191021_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_CDR to REPORT_USER
+adding primary key on table DAILY_20191021_CDR
+creating index IDX_20191021_CDR_1
+creating index IDX_20191021_CDR_2
+ALTER TABLE DAILY_20191021_CDR ADD CONSTRAINTS FK_20191021_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191021_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191021_ERRORS
+creating index IDX_20191021_ERRORS_1
+creating table DAILY_20191021_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_LOG to REPORT_USER
+adding primary key on table DAILY_20191021_LOG
+creating index IDX_20191021_LOG_1
+creating table DAILY_20191021_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191021_LOG_COMP
+creating index IDX_20191021_LOG_COMP_1
+creating table DAILY_20191022_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_CDR to REPORT_USER
+adding primary key on table DAILY_20191022_CDR
+creating index IDX_20191022_CDR_1
+creating index IDX_20191022_CDR_2
+ALTER TABLE DAILY_20191022_CDR ADD CONSTRAINTS FK_20191022_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191022_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191022_ERRORS
+creating index IDX_20191022_ERRORS_1
+creating table DAILY_20191022_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_LOG to REPORT_USER
+adding primary key on table DAILY_20191022_LOG
+creating index IDX_20191022_LOG_1
+creating table DAILY_20191022_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191022_LOG_COMP
+creating index IDX_20191022_LOG_COMP_1
+creating table DAILY_20191023_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_CDR to REPORT_USER
+adding primary key on table DAILY_20191023_CDR
+creating index IDX_20191023_CDR_1
+creating index IDX_20191023_CDR_2
+ALTER TABLE DAILY_20191023_CDR ADD CONSTRAINTS FK_20191023_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191023_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191023_ERRORS
+creating index IDX_20191023_ERRORS_1
+creating table DAILY_20191023_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_LOG to REPORT_USER
+adding primary key on table DAILY_20191023_LOG
+creating index IDX_20191023_LOG_1
+creating table DAILY_20191023_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191023_LOG_COMP
+creating index IDX_20191023_LOG_COMP_1
+creating table DAILY_20191024_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_CDR to REPORT_USER
+adding primary key on table DAILY_20191024_CDR
+creating index IDX_20191024_CDR_1
+creating index IDX_20191024_CDR_2
+ALTER TABLE DAILY_20191024_CDR ADD CONSTRAINTS FK_20191024_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191024_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191024_ERRORS
+creating index IDX_20191024_ERRORS_1
+creating table DAILY_20191024_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_LOG to REPORT_USER
+adding primary key on table DAILY_20191024_LOG
+creating index IDX_20191024_LOG_1
+creating table DAILY_20191024_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191024_LOG_COMP
+creating index IDX_20191024_LOG_COMP_1
+creating table DAILY_20191025_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_CDR to REPORT_USER
+adding primary key on table DAILY_20191025_CDR
+creating index IDX_20191025_CDR_1
+creating index IDX_20191025_CDR_2
+ALTER TABLE DAILY_20191025_CDR ADD CONSTRAINTS FK_20191025_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191025_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191025_ERRORS
+creating index IDX_20191025_ERRORS_1
+creating table DAILY_20191025_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_LOG to REPORT_USER
+adding primary key on table DAILY_20191025_LOG
+creating index IDX_20191025_LOG_1
+creating table DAILY_20191025_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191025_LOG_COMP
+creating index IDX_20191025_LOG_COMP_1
+creating table DAILY_20191026_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_CDR to REPORT_USER
+adding primary key on table DAILY_20191026_CDR
+creating index IDX_20191026_CDR_1
+creating index IDX_20191026_CDR_2
+ALTER TABLE DAILY_20191026_CDR ADD CONSTRAINTS FK_20191026_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191026_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191026_ERRORS
+creating index IDX_20191026_ERRORS_1
+creating table DAILY_20191026_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_LOG to REPORT_USER
+adding primary key on table DAILY_20191026_LOG
+creating index IDX_20191026_LOG_1
+creating table DAILY_20191026_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191026_LOG_COMP
+creating index IDX_20191026_LOG_COMP_1
+creating table DAILY_20191027_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_CDR to REPORT_USER
+adding primary key on table DAILY_20191027_CDR
+creating index IDX_20191027_CDR_1
+creating index IDX_20191027_CDR_2
+ALTER TABLE DAILY_20191027_CDR ADD CONSTRAINTS FK_20191027_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191027_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191027_ERRORS
+creating index IDX_20191027_ERRORS_1
+creating table DAILY_20191027_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_LOG to REPORT_USER
+adding primary key on table DAILY_20191027_LOG
+creating index IDX_20191027_LOG_1
+creating table DAILY_20191027_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191027_LOG_COMP
+creating index IDX_20191027_LOG_COMP_1
+creating table DAILY_20191028_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_CDR to REPORT_USER
+adding primary key on table DAILY_20191028_CDR
+creating index IDX_20191028_CDR_1
+creating index IDX_20191028_CDR_2
+ALTER TABLE DAILY_20191028_CDR ADD CONSTRAINTS FK_20191028_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191028_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191028_ERRORS
+creating index IDX_20191028_ERRORS_1
+creating table DAILY_20191028_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG to REPORT_USER
+adding primary key on table DAILY_20191028_LOG
+creating index IDX_20191028_LOG_1
+creating table DAILY_20191028_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191028_LOG_COMP
+creating index IDX_20191028_LOG_COMP_1
+creating table DAILY_20191029_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_CDR to REPORT_USER
+adding primary key on table DAILY_20191029_CDR
+creating index IDX_20191029_CDR_1
+creating index IDX_20191029_CDR_2
+ALTER TABLE DAILY_20191029_CDR ADD CONSTRAINTS FK_20191029_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191029_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191029_ERRORS
+creating index IDX_20191029_ERRORS_1
+creating table DAILY_20191029_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG to REPORT_USER
+adding primary key on table DAILY_20191029_LOG
+creating index IDX_20191029_LOG_1
+creating table DAILY_20191029_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191029_LOG_COMP
+creating index IDX_20191029_LOG_COMP_1
+creating table DAILY_20191030_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_CDR to REPORT_USER
+adding primary key on table DAILY_20191030_CDR
+creating index IDX_20191030_CDR_1
+creating index IDX_20191030_CDR_2
+ALTER TABLE DAILY_20191030_CDR ADD CONSTRAINTS FK_20191030_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191030_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191030_ERRORS
+creating index IDX_20191030_ERRORS_1
+creating table DAILY_20191030_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG to REPORT_USER
+adding primary key on table DAILY_20191030_LOG
+creating index IDX_20191030_LOG_1
+creating table DAILY_20191030_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191030_LOG_COMP
+creating index IDX_20191030_LOG_COMP_1
+creating table DAILY_20191031_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_CDR to REPORT_USER
+adding primary key on table DAILY_20191031_CDR
+creating index IDX_20191031_CDR_1
+creating index IDX_20191031_CDR_2
+ALTER TABLE DAILY_20191031_CDR ADD CONSTRAINTS FK_20191031_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191031_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191031_ERRORS
+creating index IDX_20191031_ERRORS_1
+creating table DAILY_20191031_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG to REPORT_USER
+adding primary key on table DAILY_20191031_LOG
+creating index IDX_20191031_LOG_1
+creating table DAILY_20191031_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191031_LOG_COMP
+creating index IDX_20191031_LOG_COMP_1
+creating table DAILY_20191101_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_CDR to REPORT_USER
+adding primary key on table DAILY_20191101_CDR
+creating index IDX_20191101_CDR_1
+creating index IDX_20191101_CDR_2
+ALTER TABLE DAILY_20191101_CDR ADD CONSTRAINTS FK_20191101_CDR FOREIGN KEY
+(CONTENTTYPEID) REFERENCES CCPS.CONTENTTYPES
+creating table DAILY_20191101_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191101_ERRORS
+creating index IDX_20191101_ERRORS_1
+creating table DAILY_20191101_LOG
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG to REPORT_USER
+adding primary key on table DAILY_20191101_LOG
+creating index IDX_20191101_LOG_1
+creating table DAILY_20191101_LOG_COMP
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_LOG_COMP to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_LOG_COMP to REPORT_USER
+adding primary key on table DAILY_20191101_LOG_COMP
+creating index IDX_20191101_LOG_COMP_1
+
+PL/SQL procedure successfully completed.
+
+CREATE OR REPLACE FORCE VIEW CDR
+                (ID, CALLID, CALLINGURI,
+CALLEDURI, STARTTIME, ENDTIME, INTERPRETER, MODETYPE, PROTOCOL,
+NUMDIALOGSTARTOP,
+                 CALLDURATION, COLLECTIONTIME,
+COLLECTIONLATENCY, INTERNALLATENCY, LOCATION, FILENAME, CONTENTTYPEID,
+
+SERVICE, TOTALHTTPFETCHTIME, NUMHTTPFETCH) AS
+          (SELECT ID, CALLID,
+CALLINGURI, CALLEDURI, STARTTIME, ENDTIME, SERVER,      MODETYPE, PROTOCOL,
+NUMDIALOGSTARTOP,
+                 CALLDURATION, COLLECTIONTIME,
+COLLECTIONLATENCY, INTERNALLATENCY, LOCATION, FILENAME, CONTENTTYPEID,
+
+CALLEDURI, TOTALHTTPFETCHTIME, NUMHTTPFETCH FROM DAILY_20191029_CDR)
+CREATE OR REPLACE FORCE VIEW ERRORS
+                 (ID, ERRORTYPE, CALLID,
+STARTTIME) AS
+           (SELECT ID, ERRORTYPE, CALLID, TIMESTAMP FROM
+DAILY_20191029_ERRORS)
+CREATE OR REPLACE FORCE VIEW LOG AS (SELECT * FROM DAILY_20191029_LOG)
+CREATE OR REPLACE FORCE VIEW LOG_COMP AS (SELECT * FROM DAILY_20191029_LOG_COMP)
+
+PL/SQL procedure successfully completed.
+
+
+Package altered.
+
+No errors.
+Job Number is: 5
+
+PL/SQL procedure successfully completed.
+
+Job Number is: 6
+
+PL/SQL procedure successfully completed.
+
+********************************
+* Creating MSCML CCPS data
+********************************
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+********************************
+* Creating MSCML data
+********************************
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_ERRORS to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on BATCH_JOB_LOG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on BATCH_JOB_LOG to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on MISSED_CDR_COUNT to CCPS_DS
+granting REPORT_USER_PRIVILEGES on MISSED_CDR_COUNT to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_CALLEDNUMBER to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_CALLEDNUMBER to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_CALLLEG to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_CALLLEG to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_CONFID to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_CONFID to REPORT_USER
+
+Call completed.
+
+
+Table created.
+
+granting CCPS_DS_PRIVILEGES on TRAFFIC_BY_SESSION to CCPS_DS
+granting REPORT_USER_PRIVILEGES on TRAFFIC_BY_SESSION to REPORT_USER
+
+Call completed.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+retention for MSCML.DAYS_IN_FUTURE is 2
+returning retention: 2
+retention for MSCML.DAYS_IN_PAST is 10
+returning retention: 10
+creating table DAILY_20191020_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_CDR to REPORT_USER
+adding primary key on table DAILY_20191020_CDR
+creating index IDX_20191020_CDR_1
+creating index IDX_20191020_CDR_2
+creating index IDX_20191020_CDR_3
+creating index IDX_20191020_CDR_4
+creating table DAILY_20191020_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191020_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191020_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191020_ERRORS
+creating index IDX_20191020_ERRORS_1
+creating table DAILY_20191021_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_CDR to REPORT_USER
+adding primary key on table DAILY_20191021_CDR
+creating index IDX_20191021_CDR_1
+creating index IDX_20191021_CDR_2
+creating index IDX_20191021_CDR_3
+creating index IDX_20191021_CDR_4
+creating table DAILY_20191021_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191021_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191021_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191021_ERRORS
+creating index IDX_20191021_ERRORS_1
+creating table DAILY_20191022_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_CDR to REPORT_USER
+adding primary key on table DAILY_20191022_CDR
+creating index IDX_20191022_CDR_1
+creating index IDX_20191022_CDR_2
+creating index IDX_20191022_CDR_3
+creating index IDX_20191022_CDR_4
+creating table DAILY_20191022_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191022_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191022_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191022_ERRORS
+creating index IDX_20191022_ERRORS_1
+creating table DAILY_20191023_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_CDR to REPORT_USER
+adding primary key on table DAILY_20191023_CDR
+creating index IDX_20191023_CDR_1
+creating index IDX_20191023_CDR_2
+creating index IDX_20191023_CDR_3
+creating index IDX_20191023_CDR_4
+creating table DAILY_20191023_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191023_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191023_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191023_ERRORS
+creating index IDX_20191023_ERRORS_1
+creating table DAILY_20191024_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_CDR to REPORT_USER
+adding primary key on table DAILY_20191024_CDR
+creating index IDX_20191024_CDR_1
+creating index IDX_20191024_CDR_2
+creating index IDX_20191024_CDR_3
+creating index IDX_20191024_CDR_4
+creating table DAILY_20191024_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191024_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191024_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191024_ERRORS
+creating index IDX_20191024_ERRORS_1
+creating table DAILY_20191025_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_CDR to REPORT_USER
+adding primary key on table DAILY_20191025_CDR
+creating index IDX_20191025_CDR_1
+creating index IDX_20191025_CDR_2
+creating index IDX_20191025_CDR_3
+creating index IDX_20191025_CDR_4
+creating table DAILY_20191025_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191025_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191025_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191025_ERRORS
+creating index IDX_20191025_ERRORS_1
+creating table DAILY_20191026_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_CDR to REPORT_USER
+adding primary key on table DAILY_20191026_CDR
+creating index IDX_20191026_CDR_1
+creating index IDX_20191026_CDR_2
+creating index IDX_20191026_CDR_3
+creating index IDX_20191026_CDR_4
+creating table DAILY_20191026_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191026_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191026_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191026_ERRORS
+creating index IDX_20191026_ERRORS_1
+creating table DAILY_20191027_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_CDR to REPORT_USER
+adding primary key on table DAILY_20191027_CDR
+creating index IDX_20191027_CDR_1
+creating index IDX_20191027_CDR_2
+creating index IDX_20191027_CDR_3
+creating index IDX_20191027_CDR_4
+creating table DAILY_20191027_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191027_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191027_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191027_ERRORS
+creating index IDX_20191027_ERRORS_1
+creating table DAILY_20191028_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_CDR to REPORT_USER
+adding primary key on table DAILY_20191028_CDR
+creating index IDX_20191028_CDR_1
+creating index IDX_20191028_CDR_2
+creating index IDX_20191028_CDR_3
+creating index IDX_20191028_CDR_4
+creating table DAILY_20191028_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191028_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191028_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191028_ERRORS
+creating index IDX_20191028_ERRORS_1
+creating table DAILY_20191029_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_CDR to REPORT_USER
+adding primary key on table DAILY_20191029_CDR
+creating index IDX_20191029_CDR_1
+creating index IDX_20191029_CDR_2
+creating index IDX_20191029_CDR_3
+creating index IDX_20191029_CDR_4
+creating table DAILY_20191029_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191029_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191029_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191029_ERRORS
+creating index IDX_20191029_ERRORS_1
+creating table DAILY_20191030_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_CDR to REPORT_USER
+adding primary key on table DAILY_20191030_CDR
+creating index IDX_20191030_CDR_1
+creating index IDX_20191030_CDR_2
+creating index IDX_20191030_CDR_3
+creating index IDX_20191030_CDR_4
+creating table DAILY_20191030_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191030_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191030_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191030_ERRORS
+creating index IDX_20191030_ERRORS_1
+creating table DAILY_20191031_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_CDR to REPORT_USER
+adding primary key on table DAILY_20191031_CDR
+creating index IDX_20191031_CDR_1
+creating index IDX_20191031_CDR_2
+creating index IDX_20191031_CDR_3
+creating index IDX_20191031_CDR_4
+creating table DAILY_20191031_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191031_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191031_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191031_ERRORS
+creating index IDX_20191031_ERRORS_1
+creating table DAILY_20191101_CDR
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_CDR to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_CDR to REPORT_USER
+adding primary key on table DAILY_20191101_CDR
+creating index IDX_20191101_CDR_1
+creating index IDX_20191101_CDR_2
+creating index IDX_20191101_CDR_3
+creating index IDX_20191101_CDR_4
+creating table DAILY_20191101_ERRORS
+granting CCPS_DS_PRIVILEGES on DAILY_20191101_ERRORS to CCPS_DS
+granting REPORT_USER_PRIVILEGES on DAILY_20191101_ERRORS to REPORT_USER
+adding primary key on table DAILY_20191101_ERRORS
+creating index IDX_20191101_ERRORS_1
+
+PL/SQL procedure successfully completed.
+
+CREATE OR REPLACE FORCE VIEW CDR AS (SELECT * FROM DAILY_20191029_CDR)
+CREATE OR REPLACE FORCE VIEW ERRORS
+                 (ID, ERRORTYPE, CALLID,
+STARTTIME) AS
+           (SELECT ID, ERRORTYPE, CALLID, TIMESTAMP FROM
+DAILY_20191029_ERRORS)
+
+PL/SQL procedure successfully completed.
+
+
+Package altered.
+
+No errors.
+Job Number is: 7
+
+PL/SQL procedure successfully completed.
+
+Job Number is: 8
+
+PL/SQL procedure successfully completed.
+
+ccps-oracle-install.sh                                     [  OK  ]
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# ebrs-oracle-install.sh --drop-and-create-users --db-oracle-directory .
+Enter DBMS account 'EBRS' password:
+Re-enter password:
+Enter DBMS account 'EBRS_QRTZ' password:
+Re-enter password:
+Enter DBMS account 'EBRS_DS' password:
+Re-enter password:
+Enter DBMS account 'EBRS_QRTZ_DS' password:
+Re-enter password:
+Enter DBMS account 'REPORT_USER' password:
+Re-enter password:
+********************************
+* ORF installation started at: Tue Oct 29 22:16:08 UTC 2019
+********************************
+********************************
+* Creating users
+********************************
+Enter DBMS sysdba user name: sys
+Enter DBMS account 'sys' password:
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Profile created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/EBRS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './EBRS.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/EBRS_INDEX.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './EBRS_INDEX.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+
+Directory created.
+
+
+Directory created.
+
+old   1: CREATE USER EBRS IDENTIFIED BY &NIVRDB_EBRS_PASSWD DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+new   1: CREATE USER EBRS IDENTIFIED BY EBRS DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   1: CREATE USER EBRS_DS IDENTIFIED BY &NIVRDB_EBRS_DS_PASSWD DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+new   1: CREATE USER EBRS_DS IDENTIFIED BY EBRS_DS DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Trigger created.
+
+old   2:     DATAFILE '&NIVRDB_RS_DATA_DIRECTORY/EBRS_QRTZ.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+new   2:     DATAFILE './EBRS_QRTZ.dbf' SIZE 5M AUTOEXTEND ON NEXT 5M MAXSIZE UNLIMITED
+
+Tablespace created.
+
+old   1: CREATE USER EBRS_QRTZ IDENTIFIED BY &NIVRDB_EBRS_QRTZ_PASSWD DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+new   1: CREATE USER EBRS_QRTZ IDENTIFIED BY EBRS_QRTZ DEFAULT TABLESPACE EBRS PROFILE EBRS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+old   1: CREATE USER EBRS_QRTZ_DS IDENTIFIED BY &NIVRDB_EBRS_QRTZ_DS_PASSWD DEFAULT TABLESPACE EBRS_QRTZ PROFILE EBRS_PROFILE
+new   1: CREATE USER EBRS_QRTZ_DS IDENTIFIED BY EBRS_QRTZ_DS DEFAULT TABLESPACE EBRS_QRTZ PROFILE EBRS_PROFILE
+
+User created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Trigger created.
+
+ebrs-oracle-install.sh                                     [  OK  ]
+[root@tefrs ~]# ebrs-oracle-install.sh --create-tables
+Enter DBMS account 'EBRS' password:
+Re-enter password:
+Enter DBMS account 'EBRS_QRTZ' password:
+Re-enter password:
+********************************
+* ORF installation started at: Tue Oct 29 22:16:41 UTC 2019
+********************************
+********************************
+* Creating EBRS data
+********************************
+
+Package created.
+
+No errors.
+
+Package body created.
+
+No errors.
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on DATASOURCE to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on ROLE to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on REPORT to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on REPORTDESIGNFILE to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on RAWREPORTDESIGNFILE to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on TASK to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on USERROLE to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on USERS to EBRS_DS
+
+Call completed.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on BATCH_JOB_ERRORS to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on BATCH_JOB_LOG to EBRS_DS
+
+Call completed.
+
+
+Table created.
+
+granting EBRS_DS_PRIVILEGES on BATCH_JOB_LOG to EBRS_DS
+
+Call completed.
+
+
+Sequence created.
+
+
+Grant succeeded.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row updated.
+
+
+1 row created.
+
+old   3:    values (HIBERNATE_SEQUENCE.NEXTVAL, 'oracle.jdbc.driver.OracleDriver', '&ORACLE_DB_URL',
+new   3:    values (HIBERNATE_SEQUENCE.NEXTVAL, 'oracle.jdbc.driver.OracleDriver', 'jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=OCCP)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=testdb)))',
+Enter value for nivrdb_report_user_passwd: old   4:         '&NIVRDB_REPORT_USER_USERNAME', '&NIVRDB_REPORT_USER_PASSWD')
+new   4:            'REPORT_USER', '@/opt/OC/ebrs/oracle-sql/ebrs_pkg.sql;')
+
+1 row created.
+
+
+Commit complete.
+
+Job Number is: 9
+
+PL/SQL procedure successfully completed.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+Table created.
+
+
+Grant succeeded.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Commit complete.
+
+ebrs-oracle-install.sh                                     [  OK  ]
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# sqlplus64 CRYSTAL/CRYSTAL@TNS_NIVR_RS;
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 29 22:17:21 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> select job, what from all_jobs;
+
+       JOB
+----------
+WHAT
+--------------------------------------------------------------------------------
+         3
+VXML_PACKAGE.PROC_CREATE_DAILY_VIEWS(sysdate-1);VXML_PACKAGE.PROC_PURGE_DAILY_TA
+BLES;VXML_PACKAGE.PROC_CREATE_DAILY_TABLES;VXML_PACKAGE.PROC_CLEAR_INTERMEDIATE_
+TABLES;VXML_PACKAGE.PROC_CLEAR_MISC_TABLES;VXML_PACKAGE.PROC_PACK_DAILY_TABLES_B
+YMOVE(sysdate-2);
+
+         4
+VXML_PACKAGE.PROC_CALC_LOG_REPORT_DATA(sysdate-1);
+
+
+SQL> execute VXML_PACKAGE.PROC_CALC_LOG_REPORT_DATA(sysdate);
+
+PL/SQL procedure successfully completed.
+
+SQL> select count(*) from CRYSTAL.BATCH_JOB_ERRORS;
+
+  COUNT(*)
+----------
+         0
+
+SQL> exit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# sqlplus64 CCXML/CCXML@TNS_NIVR_RS
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 29 22:19:16 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> select job, what from all_jobs;
+
+       JOB
+----------
+WHAT
+--------------------------------------------------------------------------------
+         5
+CCXML_PACKAGE.PROC_PURGE_DAILY_TABLES;CCXML_PACKAGE.PROC_CREATE_DAILY_TABLES;CCX
+ML_PACKAGE.PROC_CLEAR_INTERMEDIATE_TABLES;CCXML_PACKAGE.PROC_CLEAR_MISC_TABLES;
+
+         6
+CCXML_PACKAGE.PROC_CALC_LOG_REPORT_DATA(sysdate-1);
+
+
+SQL> execute CCXML_PACKAGE.PROC_CALC_LOG_REPORT_DATA(sysdate);
+
+PL/SQL procedure successfully completed.
+
+SQL> select count(*) from CCXML.BATCH_JOB_ERRORS;
+
+  COUNT(*)
+----------
+         0
+
+SQL> exit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# sqlplus64 MSCML/MSCML@TNS_NIVR_RS
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Oct 29 22:20:29 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> select job, what from all_jobs;
+
+       JOB
+----------
+WHAT
+--------------------------------------------------------------------------------
+         7
+MSCML_PACKAGE.PROC_PURGE_DAILY_TABLES;MSCML_PACKAGE.PROC_CREATE_DAILY_TABLES;MSC
+ML_PACKAGE.PROC_CLEAR_INTERMEDIATE_TABLES;MSCML_PACKAGE.PROC_CLEAR_MISC_TABLES;
+
+         8
+MSCML_PACKAGE.PROC_RECALCULATE_REPORT_DATA(sysdate-1);
+
+
+SQL> execute MSCML_PACKAGE.PROC_GENERATE_REPORT_DATA(NULL);
+
+PL/SQL procedure successfully completed.
+
+SQL> select count(*) from MSCML.BATCH_JOB_ERRORS;
+
+  COUNT(*)
+----------
+         0
+
+SQL> exit
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+[root@tefrs ~]#
+[root@tefrs ~]#
+[root@tefrs ~]# ccps status
+[CCSInstance]: NOT RUNNING
+[CPSInstance]: NOT RUNNING
+[TSSInstance]: NOT RUNNING
+[RMSInstance]: NOT RUNNING
+[TMSInstance]: NOT RUNNING
+[GRSInstance]: NOT RUNNING
+[ANSInstance]: NOT RUNNING
+[CSSInstance]: NOT RUNNING
+[CISInstance]: NOT RUNNING
+[root@tefrs ~]# cd /var/opt/OC/log/ccps
+[root@tefrs ccps]# ls -lrt
+total 4
+-rw-r--r-- 1 root root 632 Oct 29 01:00 archiveclean.log
+[root@tefrs ccps]#
+[root@tefrs ccps]#
+[root@tefrs ccps]#
+[root@tefrs ccps]# ls -lrt
+total 4
+-rw-r--r-- 1 root root 632 Oct 29 01:00 archiveclean.log
+[root@tefrs ccps]#
+[root@tefrs ccps]#
+[root@tefrs ccps]#
+[root@tefrs ccps]#
+[root@tefrs ccps]# ccps start
+.
+SEE AS started
+Waiting CCPS to start................................................... failed
+[root@tefrs ccps]# ccps stop
+..............................................................
+SEE AS stopped
+Waiting CCPS to stop. done
+[root@tefrs ccps]#
